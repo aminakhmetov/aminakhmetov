@@ -1,0 +1,4 @@
+- 👋 Hi, I’m Arthur Minakhemtov
+- 👀 I’m interested in Data Science, Deep Learning, Science and Optical Communications.
+- 🌱 I’m currently studying a course on ML Zoom Camp
+- 📫 How to reach me http://minakhmetov.com
