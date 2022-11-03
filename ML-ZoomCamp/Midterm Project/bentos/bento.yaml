@@ -1,0 +1,48 @@
+service: predict:svc
+name: dating_app
+version: clxa7xs3tgg4xrft
+bentoml_version: 1.0.7
+creation_time: '2022-11-03T17:00:54.611015+00:00'
+labels:
+  owner: bentoml-team
+  stage: dev
+models:
+- tag: dating_service:xykzims3tcaavrft
+  module: bentoml.xgboost
+  creation_time: '2022-11-03T16:58:30.061586+00:00'
+runners:
+- name: dating_service
+  runnable_type: XGBoostRunnable
+  models:
+  - dating_service:xykzims3tcaavrft
+  resource_config: null
+apis:
+- name: predict
+  input_type: JSON
+  output_type: JSON
+docker:
+  distro: debian
+  python_version: '3.9'
+  cuda_version: null
+  env: null
+  system_packages: null
+  setup_script: null
+  base_image: null
+  dockerfile_template: null
+python:
+  requirements_txt: null
+  packages:
+  - xgboost
+  lock_packages: true
+  index_url: null
+  no_index: null
+  trusted_host: null
+  find_links: null
+  extra_index_url: null
+  pip_args: null
+  wheels: null
+conda:
+  environment_yml: null
+  channels: null
+  dependencies: null
+  pip: null

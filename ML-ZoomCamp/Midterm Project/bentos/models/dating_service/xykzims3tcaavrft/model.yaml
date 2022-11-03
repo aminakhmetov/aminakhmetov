@@ -1,0 +1,18 @@
+name: dating_service
+version: xykzims3tcaavrft
+module: bentoml.xgboost
+labels: {}
+options:
+  model_class: Booster
+metadata: {}
+context:
+  framework_name: xgboost
+  framework_versions:
+    xgboost: 1.6.2
+  bentoml_version: 1.0.7
+  python_version: 3.9.13
+signatures:
+  predict:
+    batchable: false
+api_version: v2
+creation_time: '2022-11-03T16:58:30.061586+00:00'

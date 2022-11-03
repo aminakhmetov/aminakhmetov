@@ -1,0 +1,619 @@
+components:
+  schemas:
+    DatingQuery:
+      properties:
+        age:
+          title: Age
+          type: number
+        age_o:
+          title: Age O
+          type: number
+        ambition:
+          title: Ambition
+          type: number
+        ambition_partner:
+          title: Ambition Partner
+          type: number
+        ambitous_o:
+          title: Ambitous O
+          type: number
+        ambtition_important:
+          title: Ambtition Important
+          type: number
+        art:
+          title: Art
+          type: number
+        attractive:
+          title: Attractive
+          type: number
+        attractive_important:
+          title: Attractive Important
+          type: number
+        attractive_o:
+          title: Attractive O
+          type: number
+        attractive_partner:
+          title: Attractive Partner
+          type: number
+        clubbing:
+          title: Clubbing
+          type: number
+        concerts:
+          title: Concerts
+          type: number
+        decision:
+          title: Decision
+          type: number
+        dining:
+          title: Dining
+          type: number
+        exercise:
+          title: Exercise
+          type: number
+        expected_happy_with_sd_people:
+          title: Expected Happy With Sd People
+          type: number
+        expected_num_interested_in_me:
+          title: Expected Num Interested In Me
+          type: number
+        expected_num_matches:
+          title: Expected Num Matches
+          type: number
+        funny:
+          title: Funny
+          type: number
+        funny_important:
+          title: Funny Important
+          type: number
+        funny_o:
+          title: Funny O
+          type: number
+        funny_partner:
+          title: Funny Partner
+          type: number
+        gaming:
+          title: Gaming
+          type: number
+        gender:
+          title: Gender
+          type: string
+        guess_prob_liked:
+          title: Guess Prob Liked
+          type: number
+        hiking:
+          title: Hiking
+          type: number
+        importance_same_religion:
+          title: Importance Same Religion
+          type: number
+        intellicence_important:
+          title: Intellicence Important
+          type: number
+        intelligence:
+          title: Intelligence
+          type: number
+        intelligence_o:
+          title: Intelligence O
+          type: number
+        intelligence_partner:
+          title: Intelligence Partner
+          type: number
+        interests_correlate:
+          title: Interests Correlate
+          type: number
+        like:
+          title: Like
+          type: number
+        met:
+          title: Met
+          type: number
+        movies:
+          title: Movies
+          type: number
+        museums:
+          title: Museums
+          type: number
+        music:
+          title: Music
+          type: number
+        pref_o_ambitious:
+          title: Pref O Ambitious
+          type: number
+        pref_o_attractive:
+          title: Pref O Attractive
+          type: number
+        pref_o_funny:
+          title: Pref O Funny
+          type: number
+        pref_o_intelligence:
+          title: Pref O Intelligence
+          type: number
+        pref_o_shared_interests:
+          title: Pref O Shared Interests
+          type: number
+        pref_o_sincere:
+          title: Pref O Sincere
+          type: number
+        reading:
+          title: Reading
+          type: number
+        shared_interests_important:
+          title: Shared Interests Important
+          type: number
+        shared_interests_o:
+          title: Shared Interests O
+          type: number
+        shared_interests_partner:
+          title: Shared Interests Partner
+          type: number
+        shopping:
+          title: Shopping
+          type: number
+        sincere:
+          title: Sincere
+          type: number
+        sincere_important:
+          title: Sincere Important
+          type: number
+        sincere_partner:
+          title: Sincere Partner
+          type: number
+        sinsere_o:
+          title: Sinsere O
+          type: number
+        sports:
+          title: Sports
+          type: number
+        theater:
+          title: Theater
+          type: number
+        tv:
+          title: Tv
+          type: number
+        tvsports:
+          title: Tvsports
+          type: number
+        yoga:
+          title: Yoga
+          type: number
+      required:
+      - gender
+      - age
+      - age_o
+      - importance_same_religion
+      - pref_o_attractive
+      - pref_o_sincere
+      - pref_o_intelligence
+      - pref_o_funny
+      - pref_o_ambitious
+      - pref_o_shared_interests
+      - attractive_o
+      - sinsere_o
+      - intelligence_o
+      - funny_o
+      - ambitous_o
+      - shared_interests_o
+      - attractive_important
+      - sincere_important
+      - intellicence_important
+      - funny_important
+      - ambtition_important
+      - shared_interests_important
+      - attractive
+      - sincere
+      - intelligence
+      - funny
+      - ambition
+      - attractive_partner
+      - sincere_partner
+      - intelligence_partner
+      - funny_partner
+      - ambition_partner
+      - shared_interests_partner
+      - sports
+      - tvsports
+      - exercise
+      - dining
+      - museums
+      - art
+      - hiking
+      - gaming
+      - clubbing
+      - reading
+      - tv
+      - theater
+      - movies
+      - concerts
+      - music
+      - shopping
+      - yoga
+      - interests_correlate
+      - expected_happy_with_sd_people
+      - expected_num_interested_in_me
+      - expected_num_matches
+      - like
+      - guess_prob_liked
+      - met
+      - decision
+      title: DatingQuery
+      type: object
+    InternalServerError:
+      description: Internal Server Error
+      properties:
+        msg:
+          title: Message
+          type: string
+        type:
+          title: Error Type
+          type: string
+      required:
+      - msg
+      - type
+      title: InternalServerError
+      type: object
+    InvalidArgument:
+      description: Bad Request
+      properties:
+        msg:
+          title: Message
+          type: string
+        type:
+          title: Error Type
+          type: string
+      required:
+      - msg
+      - type
+      title: InvalidArgument
+      type: object
+    NotFound:
+      description: Not Found
+      properties:
+        msg:
+          title: Message
+          type: string
+        type:
+          title: Error Type
+          type: string
+      required:
+      - msg
+      - type
+      title: NotFound
+      type: object
+info:
+  contact:
+    email: contact@bentoml.ai
+    name: BentoML Team
+  description: "# dating_app:None\n\n[![pypi_status](https://img.shields.io/badge/BentoML-1.0.7-informational)](https://pypi.org/project/BentoML)\n\
+    [![documentation_status](https://readthedocs.org/projects/bentoml/badge/?version=latest)](https://docs.bentoml.org/)\n\
+    [![join_slack](https://badgen.net/badge/Join/BentoML%20Slack/cyan?icon=slack)](https://l.bentoml.com/join-slack-swagger)\n\
+    [![BentoML GitHub Repo](https://img.shields.io/github/stars/bentoml/bentoml?style=social)](https://github.com/bentoml/BentoML)\n\
+    [![Twitter Follow](https://img.shields.io/twitter/follow/bentomlai?label=Follow%20BentoML&style=social)](https://twitter.com/bentomlai)\n\
+    \nThis is a Machine Learning Service created with BentoML.\n| InferenceAPI | Input\
+    \ | Output |\n| ------------ | ----- | ------ |\n| POST [`/predict`](#operations-Service_APIs-dating_app__predict)\
+    \ | JSON | JSON |\n\n\n\n\n## Help\n\n* [\U0001F4D6 Documentation](https://docs.bentoml.org/en/latest/):\
+    \ Learn how to use BentoML.\n* [\U0001F4AC Community](https://l.bentoml.com/join-slack-swagger):\
+    \ Join the BentoML Slack community.\n* [\U0001F41B GitHub Issues](https://github.com/bentoml/BentoML/issues):\
+    \ Report bugs and feature requests.\n* Tip: you can also [customize this README](https://docs.bentoml.org/en/latest/concepts/bento.html#description).\n"
+  summary: A ML Service created with BentoML
+  title: dating_app
+  version: None
+openapi: 3.0.2
+paths:
+  /healthz:
+    get:
+      description: Health check endpoint. Expecting an empty response with status
+        code <code>200</code> when the service is in health state. The <code>/healthz</code>
+        endpoint is <b>deprecated</b>. (since Kubernetes v1.16)
+      responses:
+        '200':
+          description: Successful Response
+      tags:
+      - Infrastructure
+  /livez:
+    get:
+      description: Health check endpoint for Kubernetes. Healthy endpoint responses
+        with a <code>200</code> OK status.
+      responses:
+        '200':
+          description: Successful Response
+      tags:
+      - Infrastructure
+  /metrics:
+    get:
+      description: Prometheus metrics endpoint. The <code>/metrics</code> responses
+        with a <code>200</code>. The output can then be used by a Prometheus sidecar
+        to scrape the metrics of the service.
+      responses:
+        '200':
+          description: Successful Response
+      tags:
+      - Infrastructure
+  /predict:
+    post:
+      description: ''
+      operationId: dating_app__predict
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                age:
+                  title: Age
+                  type: number
+                age_o:
+                  title: Age O
+                  type: number
+                ambition:
+                  title: Ambition
+                  type: number
+                ambition_partner:
+                  title: Ambition Partner
+                  type: number
+                ambitous_o:
+                  title: Ambitous O
+                  type: number
+                ambtition_important:
+                  title: Ambtition Important
+                  type: number
+                art:
+                  title: Art
+                  type: number
+                attractive:
+                  title: Attractive
+                  type: number
+                attractive_important:
+                  title: Attractive Important
+                  type: number
+                attractive_o:
+                  title: Attractive O
+                  type: number
+                attractive_partner:
+                  title: Attractive Partner
+                  type: number
+                clubbing:
+                  title: Clubbing
+                  type: number
+                concerts:
+                  title: Concerts
+                  type: number
+                decision:
+                  title: Decision
+                  type: number
+                dining:
+                  title: Dining
+                  type: number
+                exercise:
+                  title: Exercise
+                  type: number
+                expected_happy_with_sd_people:
+                  title: Expected Happy With Sd People
+                  type: number
+                expected_num_interested_in_me:
+                  title: Expected Num Interested In Me
+                  type: number
+                expected_num_matches:
+                  title: Expected Num Matches
+                  type: number
+                funny:
+                  title: Funny
+                  type: number
+                funny_important:
+                  title: Funny Important
+                  type: number
+                funny_o:
+                  title: Funny O
+                  type: number
+                funny_partner:
+                  title: Funny Partner
+                  type: number
+                gaming:
+                  title: Gaming
+                  type: number
+                gender:
+                  title: Gender
+                  type: string
+                guess_prob_liked:
+                  title: Guess Prob Liked
+                  type: number
+                hiking:
+                  title: Hiking
+                  type: number
+                importance_same_religion:
+                  title: Importance Same Religion
+                  type: number
+                intellicence_important:
+                  title: Intellicence Important
+                  type: number
+                intelligence:
+                  title: Intelligence
+                  type: number
+                intelligence_o:
+                  title: Intelligence O
+                  type: number
+                intelligence_partner:
+                  title: Intelligence Partner
+                  type: number
+                interests_correlate:
+                  title: Interests Correlate
+                  type: number
+                like:
+                  title: Like
+                  type: number
+                met:
+                  title: Met
+                  type: number
+                movies:
+                  title: Movies
+                  type: number
+                museums:
+                  title: Museums
+                  type: number
+                music:
+                  title: Music
+                  type: number
+                pref_o_ambitious:
+                  title: Pref O Ambitious
+                  type: number
+                pref_o_attractive:
+                  title: Pref O Attractive
+                  type: number
+                pref_o_funny:
+                  title: Pref O Funny
+                  type: number
+                pref_o_intelligence:
+                  title: Pref O Intelligence
+                  type: number
+                pref_o_shared_interests:
+                  title: Pref O Shared Interests
+                  type: number
+                pref_o_sincere:
+                  title: Pref O Sincere
+                  type: number
+                reading:
+                  title: Reading
+                  type: number
+                shared_interests_important:
+                  title: Shared Interests Important
+                  type: number
+                shared_interests_o:
+                  title: Shared Interests O
+                  type: number
+                shared_interests_partner:
+                  title: Shared Interests Partner
+                  type: number
+                shopping:
+                  title: Shopping
+                  type: number
+                sincere:
+                  title: Sincere
+                  type: number
+                sincere_important:
+                  title: Sincere Important
+                  type: number
+                sincere_partner:
+                  title: Sincere Partner
+                  type: number
+                sinsere_o:
+                  title: Sinsere O
+                  type: number
+                sports:
+                  title: Sports
+                  type: number
+                theater:
+                  title: Theater
+                  type: number
+                tv:
+                  title: Tv
+                  type: number
+                tvsports:
+                  title: Tvsports
+                  type: number
+                yoga:
+                  title: Yoga
+                  type: number
+              required:
+              - gender
+              - age
+              - age_o
+              - importance_same_religion
+              - pref_o_attractive
+              - pref_o_sincere
+              - pref_o_intelligence
+              - pref_o_funny
+              - pref_o_ambitious
+              - pref_o_shared_interests
+              - attractive_o
+              - sinsere_o
+              - intelligence_o
+              - funny_o
+              - ambitous_o
+              - shared_interests_o
+              - attractive_important
+              - sincere_important
+              - intellicence_important
+              - funny_important
+              - ambtition_important
+              - shared_interests_important
+              - attractive
+              - sincere
+              - intelligence
+              - funny
+              - ambition
+              - attractive_partner
+              - sincere_partner
+              - intelligence_partner
+              - funny_partner
+              - ambition_partner
+              - shared_interests_partner
+              - sports
+              - tvsports
+              - exercise
+              - dining
+              - museums
+              - art
+              - hiking
+              - gaming
+              - clubbing
+              - reading
+              - tv
+              - theater
+              - movies
+              - concerts
+              - music
+              - shopping
+              - yoga
+              - interests_correlate
+              - expected_happy_with_sd_people
+              - expected_num_interested_in_me
+              - expected_num_matches
+              - like
+              - guess_prob_liked
+              - met
+              - decision
+              title: DatingQuery
+              type: object
+        required: true
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                type: object
+          description: Successful Response
+        400:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidArgument'
+          description: Bad Request
+        404:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+          description: Not Found
+        500:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+          description: Internal Server Error
+      summary: "InferenceAPI(JSON \u2192 JSON)"
+      tags:
+      - Service APIs
+  /readyz:
+    get:
+      description: A <code>200</code> OK status from <code>/readyz</code> endpoint
+        indicated the service is ready to accept traffic. From that point and onward,
+        Kubernetes will use <code>/livez</code> endpoint to perform periodic health
+        checks.
+      responses:
+        '200':
+          description: Successful Response
+      tags:
+      - Infrastructure
+tags:
+- description: BentoML Service API endpoints for inference.
+  name: Service APIs
+- description: Common infrastructure endpoints for observability.
+  name: Infrastructure

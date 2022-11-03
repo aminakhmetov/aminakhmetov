@@ -1,0 +1,8 @@
+numpy==1.23.4
+    # via
+    #   scipy
+    #   xgboost
+scipy==1.9.3
+    # via xgboost
+xgboost==1.7.0.post0
+    # via -r /var/folders/nm/1t2yhpvn2nbcf2mf_z_kpfxh0000gn/T/tmpl566cq8xbentoml_bento_dating_app/env/python/requirements.txt
