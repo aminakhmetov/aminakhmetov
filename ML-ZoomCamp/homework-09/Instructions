@@ -1,0 +1,10 @@
+1. Pull docker image
+	docker pull svizor42/zoomcamp-dino-dragon-lambda:v2
+2. Create a Dockerfile as in directory
+3. Create a lambda function file
+4. Build docker
+	docker build -t dino-dragon-mode .
+5. Run docker
+	docker run -it --rm -p 8080:8080 dino-dragon-mode:latest
+6. Test docker service
+	python test_service.py
