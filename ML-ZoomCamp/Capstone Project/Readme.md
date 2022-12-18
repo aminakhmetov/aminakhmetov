@@ -70,8 +70,10 @@ d) we will forward all connections from external commands from 9090 port (by tes
 9. Stop kind server: 
 kind delete cluster
 
-10. Useful commands
-kubectl get pods
-kubectl scale pod credit-card --replicas 0 
-kubectl scale service credit-card --replicas 0
+10. Useful commands:
+kubectl get pods // getter of pod
+kubectl get deployments // getter of deployment
+kubectl get services // getter of service
+kubectl scale pod cutlery --replicas 0 // stop pod.
+kubectl scale service cutlery --replicas 0 // stop service.
 
