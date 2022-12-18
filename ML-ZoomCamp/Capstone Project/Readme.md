@@ -45,7 +45,7 @@ As the model trained we can start preparation for docker image preparation. Plea
     python test_local_docker_deployment.py
     
 #### Deploying to local kind kubernetes cluster:
-Even though the created docker image is ready to be deployed to AWS Lambda serverless solution, we deploy solution locally to local kind kubernetes cluster.
+Even though the created docker image is ready to be deployed to AWS Lambda serverless solution, we deploy solution locally to local kind kubernetes cluster. Please see the video demonstration [here](https://youtu.be/Ly-a4dacRjg)
 1. Install local kind cluster, info [here](https://kind.sigs.k8s.io/docs/user/quick-start). Install kubectl, info [here](https://kubernetes.io/docs/tasks/tools/).
 2. Create Kind cluster:
 kind create cluster
