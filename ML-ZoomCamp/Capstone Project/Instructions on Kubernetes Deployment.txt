@@ -1,0 +1,27 @@
+1. Create Kind cluster:
+kind create cluster
+2. Get info about cluster:
+kubectl cluster-info
+kubectl get services
+3. Load docker image to cluster:
+kind load docker-image cutlery:v001
+4. Get up deployment and service running:
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+5. Set up port forwarding:
+kubectl port-forward service/cutlery 9090:80
+6. Test kubernetes deployment:
+
+7. Note about port forwarding:
+a) docker image/service is listening on 8080 port
+b) deployed pod is listening on 8080 port
+c) inside the kubernetes service, all requests made to 80 port will transfer to 8080 port of the pod.
+d) we will forward all connections from external commands from 9090 port (by test_local_kubernetes_deployement.py) (external outside of Kubernetes) to 80 port of service, which will route it to 8080 port of Kubernetes.
+
+8. Stop kind server: 
+kind delete cluster
+
+9. Useful commands
+kubectl get pods
+kubectl scale pod credit-card --replicas 0 
+kubectl scale service credit-card --replicas 0

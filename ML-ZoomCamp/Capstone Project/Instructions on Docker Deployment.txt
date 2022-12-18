@@ -1,0 +1,10 @@
+1. Pull docker image:
+	docker pull public.ecr.aws/lambda/python:3.9
+2. Have Dockerfile in 'deployment' directory.
+3. Have lambda function file in 'deployment' directory.
+4. Build docker after having changed directory to 'deployment' folder:
+	docker build -t cutlery:v001 .
+5. Run docker:
+	docker run -it --rm -p 8080:8080 cutlery:v001
+6. Test docker service
+	python test_local_docker_deployment.py
