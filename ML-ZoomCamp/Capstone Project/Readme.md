@@ -31,7 +31,7 @@ It is highly encouraged to run the jupyter notebook from the server or PC with G
 2. Run the training script (takes about 45 min to run on a PC): python train.py
 3. Model will be saved in *.tflite format in 'deployment' directory.
 
-#### Creating Docker Image:
+#### Model deployment by creating and running Docker image locally destined for serverless implementation on AWS Lambda:
 As the model trained we can start preparation for docker image preparation. Please see how to install docker on a PC [here](https://docs.docker.com/get-docker/):
 1. Pull the docker image from AWS destined to be employed for AWS Lambda serverless solution:
     docker pull public.ecr.aws/lambda/python:3.9
