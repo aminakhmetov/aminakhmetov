@@ -46,31 +46,31 @@ As the model trained we can start preparation for docker image preparation. Plea
     
 #### Deploying to local kind kubernetes cluster:
 Even though the created docker image is ready to be deployed to AWS Lambda serverless solution, we deploy solution locally to local kind kubernetes cluster.
-0. Install local kind cluster, info [here](https://kind.sigs.k8s.io/docs/user/quick-start). Install kubectl, info [here](https://kubernetes.io/docs/tasks/tools/).
-1. Create Kind cluster:
+1. Install local kind cluster, info [here](https://kind.sigs.k8s.io/docs/user/quick-start). Install kubectl, info [here](https://kubernetes.io/docs/tasks/tools/).
+2. Create Kind cluster:
 kind create cluster
-2. Get info about cluster:
+3. Get info about cluster:
 kubectl cluster-info
 kubectl get services
-3. Load docker image to cluster:
+4. Load docker image to cluster:
 kind load docker-image cutlery:v001
-4. Get up deployment and service running:
+5. Get up deployment and service running:
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
-5. Set up port forwarding:
+6. Set up port forwarding:
 kubectl port-forward service/cutlery 9090:80
-6. Test kubernetes deployment:
+7. Test kubernetes deployment:
 python test_local_kubernetes_deployment.py
-7. Note about port forwarding:
+8. Note about port forwarding:
 a) docker image/service is listening on 8080 port
 b) deployed pod is listening on 8080 port
 c) inside the kubernetes service, all requests made to 80 port will transfer to 8080 port of the pod.
 d) we will forward all connections from external commands from 9090 port (by test_local_kubernetes_deployement.py) (external outside of Kubernetes) to 80 port of service, which will route it to 8080 port of Kubernetes.
 
-8. Stop kind server: 
+9. Stop kind server: 
 kind delete cluster
 
-9. Useful commands
+10. Useful commands
 kubectl get pods
 kubectl scale pod credit-card --replicas 0 
 kubectl scale service credit-card --replicas 0
