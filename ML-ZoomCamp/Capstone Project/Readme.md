@@ -12,7 +12,7 @@ One can imagine the use of such classifer in online auctions of antiquites/secon
 
 ### Instruction on how to build the solution for image recognition classifier:
 
-#### Setting the envorenment
+#### Setting the environment
 1. Install conda package: https://conda.io/projects/conda/en/latest/user-guide/install/index.html
 2. Create conda environment: conda create --name ml-zoomcamp-capstone-project
 3. Activate conda environment: conda activate ml-zoomcamp-capstone-project
