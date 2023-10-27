@@ -12,7 +12,7 @@ One can imagine the use of such classifer in online auctions of antiquites/secon
 
 ### Instruction on how to build the solution for image recognition classifier:
 
-#### Setting the envorenment
+#### Setting the environment
 1. Install conda package: https://conda.io/projects/conda/en/latest/user-guide/install/index.html
 2. Create conda environment: conda create --name ml-zoomcamp-capstone-project
 3. Activate conda environment: conda activate ml-zoomcamp-capstone-project
@@ -31,8 +31,8 @@ It is highly encouraged to run the jupyter notebook from the server or PC with G
 2. Run the training script (takes about 45 min to run on a PC): python train.py
 3. Model will be saved in *.tflite format in 'deployment' directory.
 
-#### Creating Docker Image:
-As the model trained we can start preparation to for docker image deployement. Please see how to install docker on a PC [here](https://docs.docker.com/get-docker/):
+#### Model deployment by creating and running Docker image locally destined for serverless implementation on AWS Lambda:
+As the model trained we can start creating and running Docker image. Please see how to install Docker [here](https://docs.docker.com/get-docker/):
 1. Pull the docker image from AWS destined to be employed for AWS Lambda serverless solution:
     docker pull public.ecr.aws/lambda/python:3.9
 2. Have Dockerfile in 'deployment' directory.
@@ -45,34 +45,35 @@ As the model trained we can start preparation to for docker image deployement. P
     python test_local_docker_deployment.py
     
 #### Deploying to local kind kubernetes cluster:
-Even though the created docker image is ready to be deployed to AWS Lambda serverless solution, we deploy solution locally to local kind kubernetes cluster.
-0.1. Install local kind cluster, info [here](https://kind.sigs.k8s.io/docs/user/quick-start)
-0.2. Install kubectl, info [here](https://kubernetes.io/docs/tasks/tools/)
-1. Create Kind cluster:
+Even though the created docker image is ready to be deployed to AWS Lambda serverless solution, we deploy solution locally to local kind kubernetes cluster. Please see the video demonstration [here](https://youtu.be/Ly-a4dacRjg).
+1. Install local kind cluster, info [here](https://kind.sigs.k8s.io/docs/user/quick-start). Install kubectl, info [here](https://kubernetes.io/docs/tasks/tools/).
+2. Create Kind cluster:
 kind create cluster
-2. Get info about cluster:
+3. Get info about cluster:
 kubectl cluster-info
 kubectl get services
-3. Load docker image to cluster:
+4. Load docker image to cluster:
 kind load docker-image cutlery:v001
-4. Get up deployment and service running:
+5. Get up deployment and service running:
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
-5. Set up port forwarding:
+6. Set up port forwarding:
 kubectl port-forward service/cutlery 9090:80
-6. Test kubernetes deployment:
+7. Test kubernetes deployment:
 python test_local_kubernetes_deployment.py
-7. Note about port forwarding:
+8. Note about port forwarding:
 a) docker image/service is listening on 8080 port
 b) deployed pod is listening on 8080 port
 c) inside the kubernetes service, all requests made to 80 port will transfer to 8080 port of the pod.
 d) we will forward all connections from external commands from 9090 port (by test_local_kubernetes_deployement.py) (external outside of Kubernetes) to 80 port of service, which will route it to 8080 port of Kubernetes.
 
-8. Stop kind server: 
+9. Stop kind server: 
 kind delete cluster
 
-9. Useful commands
-kubectl get pods
-kubectl scale pod credit-card --replicas 0 
-kubectl scale service credit-card --replicas 0
+10. Useful commands:
+kubectl get pods // getter of pod
+kubectl get deployments // getter of deployment
+kubectl get services // getter of service
+kubectl scale pod cutlery --replicas 0 // stop pod.
+kubectl scale service cutlery --replicas 0 // stop service.
 
